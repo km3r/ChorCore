@@ -1,5 +1,7 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Observable;
 
 /**
@@ -11,6 +13,8 @@ public class Task extends Observable {
     private static int curID = 0;
     private String name;
     private User assigned;
+    private List<User> skipUser;
+    private List<User> absentUser;
     private int taskID;
 
     public Task(String name, User assigned) {
@@ -18,6 +22,8 @@ public class Task extends Observable {
         this.assigned = assigned;
         taskID = curID;
         curID++;
+        skipUser = new ArrayList<>();
+        absentUser = new ArrayList<>();
     }
 
     public String getName() {
@@ -40,5 +46,17 @@ public class Task extends Observable {
 
     public int getTaskID() {
         return taskID;
+    }
+
+    public List<User> getSkipUser() {
+        return skipUser;
+    }
+
+    public List<User> getAbsentUser() {
+        return absentUser;
+    }
+
+    public void addSkip(User user){
+        skipUser.add(user);
     }
 }

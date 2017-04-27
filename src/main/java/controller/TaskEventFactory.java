@@ -11,9 +11,8 @@ import model.User;
  * Created by Kyle on 4/27/2017.
  */
 public class TaskEventFactory {
-    DatabaseHolder holder;
 
-    public TaskEvent getTaskEvent(int taskID, int groupID, int userID) throws BadIDException {
+    public static TaskEvent getTaskEvent(DatabaseHolder holder, int taskID, int groupID, int userID) throws BadIDException {
         Group g = holder.getGroup(groupID);
         User u = holder.getUser(userID);
         if (g == null || u == null) throw new BadIDException();

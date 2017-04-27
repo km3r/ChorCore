@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,6 +19,8 @@ public class Group {
         this.name = name;
         groupID = curID;
         curID++;
+        tasks = new ArrayList<>();
+        members = new ArrayList<>();
     }
 
     public long getGroupID() {
@@ -26,5 +29,9 @@ public class Group {
 
     public List<Task> getTasks() {
         return tasks;
+    }
+
+    public List<User> getMembers() {
+        return members;
     }
 }
