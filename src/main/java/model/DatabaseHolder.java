@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,6 +11,11 @@ import java.util.List;
 public class DatabaseHolder {
     List<User> allUsers;
     List<Group> allGroups; //groups also have tasks
+
+    public DatabaseHolder() {
+        allGroups = new ArrayList<Group>();
+        allUsers = new ArrayList<User>();
+    }
 
     public List<User> getAllUsers() {
         return allUsers;
