@@ -12,10 +12,13 @@ import model.User;
  */
 public class TaskEventFactory {
 
+    private TaskEventFactory() {}
+
     public static TaskEvent getTaskEvent(DatabaseHolder holder, int taskID, int groupID, int userID) throws BadIDException {
         Group g = holder.getGroup(groupID);
         User u = holder.getUser(userID);
-        if (g == null || u == null) throw new BadIDException();
+        if (g == null || u == null)
+            throw new BadIDException();
         Task t = null;
         for (Task task : g.getTasks()) {
             if (task.getTaskID() == taskID) {
@@ -23,7 +26,8 @@ public class TaskEventFactory {
                 break;
             }
         }
-        if (t == null) throw new BadIDException();
+        if (t == null)
+            throw new BadIDException();
         return new TaskEvent(t,g,u);
     }
 }

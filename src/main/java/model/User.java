@@ -11,12 +11,12 @@ import java.util.List;
  * <p>
  * Created by Kyle on 4/20/2017.
  */
-public class User implements Serializable {
+public class User {
     private static long curID = 0;
     String name;
     long userID;
     byte[] hashPass;
-    List<Group> groups;
+    private List<Group> groups;
     int vacationDays;
 
     public User(String name, byte[] hashPass) {
@@ -37,6 +37,11 @@ public class User implements Serializable {
         if (o instanceof User)
             return ((User)o).userID == userID;
         return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return (int) (name.hashCode() * userID);
     }
 
     public int getVacationDays() {
