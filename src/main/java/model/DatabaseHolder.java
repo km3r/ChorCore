@@ -13,8 +13,8 @@ public class DatabaseHolder {
     List<Group> allGroups; //groups also have tasks
 
     public DatabaseHolder() {
-        allGroups = new ArrayList<Group>();
-        allUsers = new ArrayList<User>();
+        allGroups = new ArrayList<>();
+        allUsers = new ArrayList<>();
     }
 
     public List<User> getAllUsers() {
@@ -41,21 +41,21 @@ public class DatabaseHolder {
         allGroups.remove(group);
     }
 
-    public User getUser(long ID)
-    {
-        for (User u: allUsers)
-        {
-            if (u.getUserID() == ID)
+
+    public User getUser(long id) {
+        for (User u: allUsers) {
+            if (u.getUserID() == id) {
                 return u;
+            }
         }
         return null;
     }
 
-    public Group getGroup(long ID){
-        for (Group g: allGroups)
-        {
-            if (g.getGroupID() == ID)
+    public Group getGroup(long id) {
+        for (Group g: allGroups) {
+            if (g.getGroupId() == id) {
                 return g;
+            }
         }
         return null;
     }

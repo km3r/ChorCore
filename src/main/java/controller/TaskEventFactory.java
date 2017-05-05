@@ -14,14 +14,15 @@ public class TaskEventFactory {
 
     private TaskEventFactory() {}
 
-    public static TaskEvent getTaskEvent(DatabaseHolder holder, int taskID, int groupID, int userID) throws BadIDException {
-        Group g = holder.getGroup(groupID);
-        User u = holder.getUser(userID);
+    public static TaskEvent getTaskEvent(DatabaseHolder holder, int taskId, int groupId, int userId)
+            throws BadIDException {
+        Group g = holder.getGroup(groupId);
+        User u = holder.getUser(userId);
         if (g == null || u == null)
             throw new BadIDException();
         Task t = null;
         for (Task task : g.getTasks()) {
-            if (task.getTaskID() == taskID) {
+            if (task.getTaskID() == taskId) {
                 t = task;
                 break;
             }

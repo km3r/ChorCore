@@ -11,7 +11,7 @@ import java.util.EventObject;
  * <p>
  * Created by Kyle on 4/27/2017.
  */
-public class TaskEvent extends EventObject{
+public class TaskEvent extends EventObject {
     Task task;
     Group group;
     User user;

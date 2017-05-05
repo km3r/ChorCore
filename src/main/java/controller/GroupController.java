@@ -18,8 +18,7 @@ public class GroupController {
     //TODO add/remove user
     //TODO create/destroy group
 
-
-    public void onTaskEvent( TaskEvent event ) {
+    public void onTaskEvent(TaskEvent event) {
         if (event.task.getAssigned().equals(event.user)) {
             for (User user: event.task.getAbsentUser()) {
                 if (user.getVacationDays() == 0) {

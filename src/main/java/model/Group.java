@@ -13,18 +13,18 @@ public class Group {
     private List<User> members;
     private List<Task> tasks;
     private String name;
-    private long groupID;
+    private long groupId;
 
     public Group(String name) {
         this.name = name;
-        groupID = curID;
+        groupId = curID;
         curID++;
         tasks = new ArrayList<>();
         members = new ArrayList<>();
     }
 
-    public long getGroupID() {
-        return groupID;
+    public long getGroupId() {
+        return groupId;
     }
 
     public List<Task> getTasks() {
