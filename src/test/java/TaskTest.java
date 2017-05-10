@@ -30,6 +30,7 @@ public class TaskTest {
         holder.addGroup(group);
         holder.addUser(user1);
         holder.addUser(user2);
+        user1.getUserID();
     }
 
     @Test
