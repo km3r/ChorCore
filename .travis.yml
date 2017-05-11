@@ -6,7 +6,7 @@ addons:
     organization: "305"
 script:
  - sonar-scanner
- - ./gradlew clean jacocoTestReport sonarqube
+ - ./gradlew clean jacocoTestReport
 
 before_cache:
  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
