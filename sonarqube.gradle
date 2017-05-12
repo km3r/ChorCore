@@ -7,7 +7,7 @@ sonarqube {
         property "sonar.java.binaries", "build/classes/main"
 
         property "sonar.tests", "src/test/java" // where the tests are located
-        property "sonar.java.test.binaries", "build/classes/debug/test"
+        property "sonar.java.test.binaries", "build/classes/test"
 
         property "sonar.scm.provider", "git"
 
