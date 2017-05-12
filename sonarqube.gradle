@@ -13,6 +13,12 @@ sonarqube {
 
         property "sonar.jacoco.reportPaths", "build/jacoco/test.exec" // path to coverage reports
         property "sonar.java.coveragePlugin", "jacoco"
-        property "sonar.junit.reportsPath", "build/test-results/test" // path to junit reports
+        property "sonar.junit.reportsPaths", "build/test-results/test" // path to junit reports
+
+        property "sonar.projectKey", "km3r-ChorCore-key"
+        property "sonar.projectName", "km3r-ChorCore"
+        property "sonar.projectVersion", "0.0.1"
+        property "sonar.organization", "305"
+
     }
 }

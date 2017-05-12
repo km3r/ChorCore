@@ -5,7 +5,6 @@ addons:
   sonarqube:
     organization: "305"
 script:
- - sonar-scanner
  - ./gradlew clean test jacocoTestReport sonarqube
 
 before_cache:
