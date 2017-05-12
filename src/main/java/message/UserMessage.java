@@ -10,8 +10,12 @@ import model.User;
  */
 public class UserMessage  extends Message{
    User user;
+
+   public UserMessage(long userID, MessageType type) {
+      super(userID, type);
+   }
 }
 
 enum UserMessageType {
-   LOGIN, CREATE, UPDATE, ADD_GROUP, LEAVE_GROUP
+   CREATE, UPDATE, ADD_GROUP, LEAVE_GROUP
 }
