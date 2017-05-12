@@ -34,4 +34,12 @@ public class Group {
     public List<User> getMembers() {
         return members;
     }
+
+    public static long getCurID() {
+        return curID;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

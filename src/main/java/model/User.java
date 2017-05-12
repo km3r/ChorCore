@@ -51,4 +51,20 @@ public class User {
     public void setVacationDays(int vacationDays) {
         this.vacationDays = vacationDays;
     }
+
+    public static long getCurID() {
+        return curID;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public byte[] getHashPass() {
+        return hashPass;
+    }
+
+    public List<Group> getGroups() {
+        return groups;
+    }
 }
