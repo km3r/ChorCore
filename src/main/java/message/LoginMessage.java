@@ -12,4 +12,13 @@ public class LoginMessage extends Message{
     public LoginMessage( String userName, byte[] hashPass) {
         super(0, MessageType.LOGIN);
     }
+
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public byte[] getHashPass() {
+        return hashPass;
+    }
 }
