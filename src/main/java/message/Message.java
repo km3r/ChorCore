@@ -1,12 +1,14 @@
 package message;
 
+import java.io.Serializable;
+
 /**
  * The message class to be sent over the network
  *
  * @author Kyle Rosenthal
  * @version 1
  */
-public class Message {
+public class Message implements Serializable {
    private long userID;
    private MessageType supertype;
 
