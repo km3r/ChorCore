@@ -14,7 +14,7 @@ public class TaskEventFactory {
 
     private TaskEventFactory() {}
 
-    public static TaskEvent getTaskEvent(DatabaseHolder holder, int taskId, int groupId, int userId)
+    public static TaskEvent getTaskEvent(DatabaseHolder holder, long taskId, long groupId, long userId)
             throws BadIDException {
         Group g = holder.getGroup(groupId);
         User u = holder.getUser(userId);

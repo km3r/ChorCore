@@ -1,4 +1,7 @@
 import controller.Core;
+import message.LoginMessage;
+import message.LoginReply;
+import message.UserMessage;
 import org.junit.Test;
 
 /**
@@ -12,6 +15,13 @@ public class CoreTest {
     public void testTest(){
         Core core = new Core();
         assert core.foo();
+    }
+
+    @Test
+    public void messageTest() {
+        LoginMessage loginMessage = new LoginMessage("bob", null);
+        LoginReply reply = new LoginReply(0);
+        UserMessage userMessage = new UserMessage(0);
     }
 
 }

@@ -9,10 +9,9 @@ import model.User;
  * @version (AssignmentName)
  */
 public class UserMessage  extends Message{
-   User user;
 
-   public UserMessage(long userID, MessageType type) {
-      super(userID, type);
+   public UserMessage(long userID) {
+      super(userID, MessageType.USER_ACTION);
    }
 }
 

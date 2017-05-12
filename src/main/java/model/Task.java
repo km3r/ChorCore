@@ -10,12 +10,12 @@ import java.util.Observable;
  * Created by Kyle on 4/27/2017.
  */
 public class Task extends Observable {
-    private static int curID = 0;
+    private static long curID = 0;
     private String name;
     private User assigned;
     private List<User> skipUser;
     private List<User> absentUser;
-    private int taskID;
+    private long taskID;
 
     public Task(String name, User assigned) {
         this.name = name;
@@ -44,7 +44,7 @@ public class Task extends Observable {
         this.assigned = assigned;
     }
 
-    public int getTaskID() {
+    public long getTaskID() {
         return taskID;
     }
 

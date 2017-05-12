@@ -11,7 +11,7 @@ import java.util.EventObject;
  * <p>
  * Created by Kyle on 4/27/2017.
  */
-public class TaskEvent extends EventObject {
+public class TaskEvent {
     Task task;
     Group group;
     User user;
@@ -23,9 +23,20 @@ public class TaskEvent extends EventObject {
      * @throws IllegalArgumentException if task is null.
      */
     protected TaskEvent(Task task, Group group, User user) {
-        super(task);
         this.task = task;
         this.group = group;
         this.user = user;
+    }
+
+    public Task getTask() {
+        return task;
+    }
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public User getUser() {
+        return user;
     }
 }
